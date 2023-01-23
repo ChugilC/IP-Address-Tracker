@@ -1,0 +1,141 @@
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  /* height: 20vh; */
+
+  background: url('./images/pattern-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.container .input {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  height: 2.5rem;
+  width: 50rem;
+  padding: 2rem 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.field:focus {
+  outline: none;
+}
+
+.search {
+  outline: 0;
+  background-color: #000;
+  width: 4rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+}
+
+.content {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  width: 80rem;
+  transform: translateY(4rem);
+  border-radius: 1.5rem;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.box {
+  height: 100%;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box span {
+  color: var(--DarkGray);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.box p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#map {
+  height: 79vh;
+  z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+  .container h1 {
+    margin-top: 4rem;
+  }
+
+  .field {
+    height: 2rem;
+    width: 25rem;
+  }
+
+  .content {
+    flex-direction: column;
+    width: 35rem;
+    height: 30rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .box {
+    margin-bottom: 2rem;
+  }
+
+  .box span {
+    font-size: 1.2rem;
+    letter-spacing: 0.32rem;
+  }
+
+  .box p {
+    font-size: 1.8rem;
+  }
+}
