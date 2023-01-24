@@ -6,8 +6,6 @@ const locationsEL = document.getElementById('location');
 const timezoneEL = document.getElementById('timezone');
 const ispEL = document.getElementById('isp');
 
-const token = config.API_KEY;
-
 let mapCords = {
   center: [40.6782, -73.949997],
   zoom: 13,
@@ -25,7 +23,7 @@ let marker = L.marker(mapCords.center).addTo(map);
 
 const findLocation = async (address) => {
   const res = await fetch(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=${token}&ipAddress=${address}`
+    `https://geo.ipify.org/api/v2/country,city?apiKey=at_S01pTix66v2DBhv0IcIsxBuwmtX2b&ipAddress=${address}`
   );
   const data = await res.json();
 
